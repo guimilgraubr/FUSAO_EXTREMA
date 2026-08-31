@@ -1,0 +1,108 @@
+# Grafo de Conhecimento Combinado Claude-Gemini
+# FUSAO_EXTREMA/entidades/knowledge_graph.yaml
+
+version: "1.0"
+graph_structure:
+  nodes:
+    - id: "technical_knowledge"
+      type: "domain"
+      properties:
+        claude_strength: 0.9
+        gemini_strength: 0.6
+        fusion_potential: 0.85
+        connections: ["programming", "mathematics", "engineering", "analysis"]
+
+    - id: "creative_knowledge"
+      type: "domain"
+      properties:
+        claude_strength: 0.4
+        gemini_strength: 0.9
+        fusion_potential: 0.95
+        connections: ["innovation", "design", "artistic_expression", "brainstorming"]
+
+    - id: "logical_reasoning"
+      type: "capability"
+      properties:
+        claude_strength: 0.95
+        gemini_strength: 0.8
+        fusion_potential: 0.92
+        connections: ["problem_solving", "critical_thinking", "deductive_reasoning"]
+
+    - id: "analytical_thinking"
+      type: "capability"
+      properties:
+        claude_strength: 0.9
+        gemini_strength: 0.7
+        fusion_potential: 0.88
+        connections: ["data_analysis", "pattern_recognition", "evaluation"]
+
+    - id: "programming"
+      type: "subdomain"
+      properties:
+        claude_strength: 0.95
+        gemini_strength: 0.75
+        fusion_potential: 0.91
+        connections: ["technical_knowledge", "logical_reasoning", "analytical_thinking"]
+
+    - id: "innovation"
+      type: "subdomain"
+      properties:
+        claude_strength: 0.5
+        gemini_strength: 0.95
+        fusion_potential: 0.93
+        connections: ["creative_knowledge", "problem_solving", "design"]
+
+    - id: "problem_solving"
+      type: "capability"
+      properties:
+        claude_strength: 0.85
+        gemini_strength: 0.8
+        fusion_potential: 0.9
+        connections: ["logical_reasoning", "analytical_thinking", "innovation"]
+
+  relationships:
+    - from: "technical_knowledge"
+      to: "programming"
+      strength: 0.95
+      type: "encompasses"
+
+    - from: "creative_knowledge"
+      to: "innovation"
+      strength: 0.9
+      type: "encompasses"
+
+    - from: "logical_reasoning"
+      to: "problem_solving"
+      strength: 0.88
+      type: "enables"
+
+    - from: "analytical_thinking"
+      to: "problem_solving"
+      strength: 0.85
+      type: "supports"
+
+fusion_rules:
+  high_synergy_pairs:
+    - ["technical_knowledge", "creative_knowledge"]
+    - ["logical_reasoning", "innovation"]
+    - ["programming", "innovation"]
+
+  activation_thresholds:
+    technical_tasks: 0.7
+    creative_tasks: 0.8
+    analytical_tasks: 0.75
+    problem_solving: 0.8
+
+weight_adjustments:
+  # Ajustes de peso baseados no tipo de tarefa
+  technical_task_bias:
+    claude_boost: 1.1
+    gemini_reduction: 0.9
+
+  creative_task_bias:
+    gemini_boost: 1.2
+    claude_reduction: 0.85
+
+  balanced_task_bias:
+    claude_boost: 1.0
+    gemini_boost: 1.0

@@ -1,0 +1,23 @@
+{
+  "claude_profile": {
+    "strengths": ["análise de código", "raciocínio lógico", "explicação técnica", "detecção de erros"],
+    "specialties": ["programação", "matemática", "análise de sistemas", "documentação"],
+    "best_for": ["tarefas técnicas", "análise crítica", "revisão de código", "explicações detalhadas"]
+  },
+  "gemini_profile": {
+    "strengths": ["criatividade", "geração de ideias", "raciocínio divergente", "conexões inusitadas"],
+    "specialties": ["criatividade", "brainstorming", "aplicações inovadoras", "interdisciplinaridade"],
+    "best_for": ["tarefas criativas", "geração de ideias", "insights inovadores", "conexões entre áreas diversas"]
+  },
+  "fusion_strategies": {
+    "complementary_tasks": {
+      "technical_creative": "Usar Claude para fundamentação técnica e Gemini para insights criativos",
+      "analytical_generative": "Claude para análise crítica e Gemini para geração de alternativas",
+      "verification_generation": "Claude para verificação e validação, Gemini para geração de hipóteses"
+    },
+    "adaptive_switching": {
+      "criteria": ["complexidade", "domínio", "objetivo", "tempo_disponível"],
+      "triggers": ["alta_complexidade_técnica", "necessidade_de_criatividade", "verificação_crítica", "exploração_idea"]
+    }
+  }
+}

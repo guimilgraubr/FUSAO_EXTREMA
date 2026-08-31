@@ -1,0 +1,63 @@
+{
+  "default_weights": {
+    "claude": {
+      "analytical": 0.85,
+      "technical": 0.90,
+      "logical": 0.88,
+      "creative": 0.40,
+      "emotional": 0.30
+    },
+    "gemini": {
+      "analytical": 0.60,
+      "technical": 0.70,
+      "logical": 0.75,
+      "creative": 0.95,
+      "emotional": 0.65
+    }
+  },
+  "task_specific_weights": {
+    "programming": {
+      "claude_boost": 1.2,
+      "gemini_reduction": 0.8,
+      "priority_factors": ["technical", "analytical", "logical"]
+    },
+    "creative_writing": {
+      "gemini_boost": 1.3,
+      "claude_reduction": 0.7,
+      "priority_factors": ["creative", "emotional"]
+    },
+    "research_analysis": {
+      "balanced_approach": 1.0,
+      "priority_factors": ["analytical", "logical", "technical"]
+    },
+    "problem_solving": {
+      "hybrid_approach": 1.1,
+      "priority_factors": ["logical", "analytical", "creative"]
+    },
+    "innovation": {
+      "gemini_boost": 1.25,
+      "claude_modest_increase": 1.05,
+      "priority_factors": ["creative", "analytical"]
+    }
+  },
+  "adaptive_parameters": {
+    "learning_rate": 0.1,
+    "confidence_threshold": 0.75,
+    "consistency_window": 5,
+    "weight_drift_limit": 0.3
+  },
+  "fusion_strategies": {
+    "early_fusion": {
+      "description": "Combina entradas antes do processamento",
+      "best_for": ["similar_tasks", "complementary_inputs"]
+    },
+    "late_fusion": {
+      "description": "Combina saídas após processamento individual",
+      "best_for": ["diverse_tasks", "conflicting_inputs"]
+    },
+    "hybrid_fusion": {
+      "description": "Combinação adaptativa de early e late fusion",
+      "best_for": ["complex_tasks", "multi_modal_inputs"]
+    }
+  }
+}
