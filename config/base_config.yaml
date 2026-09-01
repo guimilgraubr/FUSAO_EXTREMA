@@ -1,0 +1,39 @@
+# ===== BASE CONFIGURATION =====
+# Configuração padrão para todos os environments
+
+app:
+  name: "Fusion AI"
+  version: "2.0.0"
+  description: "Intelligent AI Fusion System"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  prefix: "/api/v1"
+  docs_url: "/docs"
+  openapi_url: "/openapi.json"
+
+logging:
+  level: "INFO"
+  format: "json"
+  
+models:
+  supported:
+    - claude
+    - gemini
+    - llama
+    - mistral
+    - gpt4
+  default: "claude"
+  timeout: 30
+
+fusion:
+  strategies:
+    - weighted
+    - debate
+    - tournament
+    - sequential_refinement
+    - ensemble
+  default_strategy: "weighted"
+  cache_responses: false
+  cache_ttl: 3600

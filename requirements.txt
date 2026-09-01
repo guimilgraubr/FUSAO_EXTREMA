@@ -1,0 +1,22 @@
+# Core Dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# AI/ML APIs
+anthropics==0.7.0
+google-generativeai==0.3.0
+
+# Utilities
+pyyaml==6.0.1
+python-json-logger==2.0.7
+requests==2.31.0
+
+# Database & Caching (optional)
+sqlalchemy==2.0.23
+redis==5.0.1
+
+# Logging & Monitoring
+python-logging-json==2.0.7

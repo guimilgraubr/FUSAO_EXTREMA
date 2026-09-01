@@ -1,0 +1,15 @@
+# ===== DEVELOPMENT CONFIGURATION =====
+
+debug: true
+environment: development
+
+api:
+  host: "localhost"
+  port: 8000
+  reload: true
+
+logging:
+  level: "DEBUG"
+
+fusion:
+  cache_responses: false
